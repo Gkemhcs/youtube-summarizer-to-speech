@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://www.youtube.com/s/desktop/8a749c30/img/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Summarizer</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            font-family: 'Indie Flower', cursive;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            color: white;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+        .spinner-border {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">🎥 YouTube Video Summarizer 📝</h1>
+        <p class="lead text-center">A simple serverless API which summarizes YouTube videos and converts them into audio_files.</p>
+
+        <form id="summarizeForm" method="POST" action="/convert" onsubmit="showSpinner()">
+            <div class="form-group">
+                <label for="videoUrl">YouTube Video URL</label>
+                <input type="text" class="form-control" name="videoUrl" placeholder="Enter YouTube video URL">
+            </div>
+            <button type="submit" class="btn btn-light btn-block"><i class="fa fa-video-camera"></i> Convert</button>
+        </form>
+        <div class="text-center mt-3">
+            <div class="spinner-border text-light" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function showSpinner() {
+            document.querySelector('.spinner-border').style.display = 'block';
+        }
+        </script>
+   
+</body>
+</html>
