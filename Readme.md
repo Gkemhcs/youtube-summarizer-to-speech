@@ -118,3 +118,11 @@ gcloud  run deploy yt-summarizer-api --region asia-south2  --port 8080 \
 ```bash
 gcloud run services describe yt-summarizer-api  --region asia-south2 --format json|jq -r .status.address.url
 ```
+
+#### PROJECT IMAGES:- 
+##### HOME PAGE
+![Project home page](./img/yt-api-home.png)
+##### PROCESSING PAGE 
+![Project home page](./img/yt-api-process.png)
+##### QRCODE PAGE 
+![Project  qr code generation page](./img/yt-api-qr.png)
